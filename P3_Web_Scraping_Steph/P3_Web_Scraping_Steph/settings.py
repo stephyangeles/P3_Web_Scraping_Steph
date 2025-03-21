@@ -77,14 +77,14 @@ WSGI_APPLICATION = 'P3_Web_Scraping_Steph.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mssql',
-        'NAME': 'ScrapingSteph',  # Nombre de tu base de datos
-        'USER': '',  # Vacío porque usas autenticación de Windows
-        'PASSWORD': '',  # Vacío porque usas autenticación de Windows
-        'HOST': 'DESKTOP-668055Q\SQLEXPRESS',  # Servidor SQL Server
-        'PORT': '',  # Déjalo vacío para usar el puerto por defecto
+        'NAME': 'ScrapingSteph',  
+        'USER': '',  
+        'PASSWORD': '',
+        'HOST': 'DESKTOP-668055Q\SQLEXPRESS',
+        'PORT': '',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
-            'trusted_connection': 'yes',  # Esto permite la autenticación de Windows
+            'trusted_connection': 'yes',
         },
     }
 }
