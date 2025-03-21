@@ -76,10 +76,19 @@ WSGI_APPLICATION = 'P3_Web_Scraping_Steph.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'mssql',
+        'NAME': 'ScrapingSteph',  # Nombre de tu base de datos
+        'USER': '',  # Vacío porque usas autenticación de Windows
+        'PASSWORD': '',  # Vacío porque usas autenticación de Windows
+        'HOST': 'DESKTOP-668055Q\SQLEXPRESS',  # Servidor SQL Server
+        'PORT': '',  # Déjalo vacío para usar el puerto por defecto
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'trusted_connection': 'yes',  # Esto permite la autenticación de Windows
+        },
     }
 }
+
 
 
 # Password validation
